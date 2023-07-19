@@ -67,6 +67,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
+      - run: |
+          sudo apt-get install python3.7
+          export CLOUDSDK_PYTHON="/usr/bin/python3"
+
       - name: Google Auth
         id: auth
         uses: 'google-github-actions/auth@v0'
