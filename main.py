@@ -1,5 +1,5 @@
 from flask import Flask, render_template, redirect, url_for, flash, abort
-from flask_bootstrap import Bootstrap4
+from flask_bootstrap import Bootstrap
 from flask_ckeditor import CKEditor
 from datetime import date
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -14,7 +14,7 @@ from functools import wraps
 app = Flask(__name__)
 app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
 ckeditor = CKEditor(app)
-Bootstrap4(app)
+Bootstrap(app)
 login_manager = LoginManager()
 login_manager.init_app(app)
 
